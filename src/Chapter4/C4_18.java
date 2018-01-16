@@ -3,29 +3,30 @@ package Chapter4;
 import java.util.Scanner;
 
 /**
- * Program assigns the user a major and a year 
+ * Program assigns the user a major and a year
  *
  * @author Eric Zacarias
-*/
+ */
+public class C4_18 {
 
-public class C4_18
-{
-    public static void main(String[] args) 
-    {
+    /**
+     * Main Method
+     *
+     * @param args arguments from command line prompt
+     */
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        
+
         System.out.print("Enter two characters: ");
         String status = in.next();
-        
-        char major  = Character.toUpperCase(status.charAt(0));
+
+        char major = Character.toUpperCase(status.charAt(0));
         char year = status.charAt(1);
         String courseName = "";
         String yearName = "";
-        
-        if ((major == 'M' || major == 'I' || major == 'C') && (year == '1' ||year == '2' ||year == '3' ||year == '4' ))
-        {
-            switch(major)
-            {
+
+        if ((major == 'M' || major == 'I' || major == 'C') && (year == '1' || year == '2' || year == '3' || year == '4')) {
+            switch (major) {
                 case 'M':
                     courseName = "Mathematics";
                     break;
@@ -35,12 +36,12 @@ public class C4_18
                 case 'I':
                     courseName = "Information Technology";
                     break;
-                default: courseName = ".";
+                default:
+                    courseName = ".";
                     break;
             }
-            
-            switch(year)
-            {
+
+            switch (year) {
                 case '1':
                     yearName = "Freshman";
                     break;
@@ -53,12 +54,12 @@ public class C4_18
                 case '4':
                     yearName = "Senior";
                     break;
-                default: yearName = "Error";
+                default:
+                    yearName = "Error";
                     break;
             }
             System.out.printf("%s %s\n", courseName, yearName);
-        }
-        else{
+        } else {
             System.out.printf("Invalid input.\n");
         }
     }
