@@ -6,13 +6,15 @@ import java.util.Scanner;
  * Program tells the user his gross income and net pay
  *
  * @author Eric Zacarias
-*/
+ */
+public class C4_23 {
 
-public class C4_23
-{
-
-    public static void main(String[] args) 
-    {
+    /**
+     * Main Method
+     *
+     * @param args arguments from command line prompt
+     */
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter Employee's name:");
